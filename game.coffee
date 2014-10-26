@@ -50,6 +50,11 @@ class GameGamen extends Scene
     @seigenJikan = new SeigenJikan(30)
     @addChild @seigenJikan
 
+  onenterframe: ->
+    if @seigenJikan.nokoriFrame < 0
+      core.gameOverGamen = new GameOverGamen()
+      core.replaceScene core.gameOverGamen
+
 class Mol extends Sprite
   constructor: ->
     super 151, 169
