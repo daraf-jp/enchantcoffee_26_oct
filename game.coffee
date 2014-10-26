@@ -55,7 +55,7 @@ class GameGamen extends Scene
 
   onenterframe: ->
     if @seigenJikan.nokoriFrame < 0
-      core.gameOverGamen = new GameOverGamen()
+      core.gameOverGamen = new GameOverGamen(@taniGoukei)
       core.replaceScene core.gameOverGamen
 
     if @age % 30 is 0
@@ -129,11 +129,14 @@ class Tani extends Sprite
     @y += 4
 
 class GameOverGamen extends Scene
-  constructor: () ->
+  constructor: (tani) ->
     super()
     haikei = new Sprite(GAMEN_YOKO, GAMEN_TATE)
 
-    haikei.image = core.assets['game_over1.png']
+    if tani < 20
+      haikei.image = core.assets['game_over1.png']
+    else
+      haikei.image = core.assets['game_over2.png']
 
     @addChild haikei
 
