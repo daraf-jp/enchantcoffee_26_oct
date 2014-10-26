@@ -20,5 +20,7 @@ window.onload = ->
   core.preload gazou
 
   core.onload = ->
+    @titleGamen = new TitleGamen()
+    @pushScene @titleGamen
 
   core.start()
