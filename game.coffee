@@ -43,3 +43,6 @@ class GameGamen extends Scene
     haikei = new Sprite(GAMEN_YOKO, GAMEN_TATE)
     haikei.image = core.assets['game.png']
     @addChild haikei
+
+    @mol = new Mol()
+    @addChild @mol
