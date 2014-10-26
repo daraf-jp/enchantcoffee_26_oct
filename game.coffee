@@ -58,6 +58,10 @@ class GameGamen extends Scene
       core.gameOverGamen = new GameOverGamen()
       core.replaceScene core.gameOverGamen
 
+    if @age % 30 is 0
+      tani = new Tani()
+      @addChild tani
+
 class Mol extends Sprite
   constructor: ->
     super 151, 169
