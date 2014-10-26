@@ -85,3 +85,12 @@ class SeigenJikan extends Label
     @nokoriFrame--
     nokoriJikan = @nokoriFrame / core.fps
     @text = nokoriJikan.toFixed(2).toString()
+
+class GameOverGamen extends Scene
+  constructor: () ->
+    super()
+    haikei = new Sprite(GAMEN_YOKO, GAMEN_TATE)
+
+    haikei.image = core.assets['game_over1.png']
+
+    @addChild haikei
