@@ -117,6 +117,9 @@ class Tani extends Sprite
     @x = Math.random() * (GAMEN_YOKO - @width)
     @y = -@height
 
+  onenterframe: ->
+    @y += 4
+
 class GameOverGamen extends Scene
   constructor: () ->
     super()
