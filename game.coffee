@@ -47,6 +47,9 @@ class GameGamen extends Scene
     @mol = new Mol()
     @addChild @mol
 
+    @seigenJikan = new SeigenJikan(30)
+    @addChild @seigenJikan
+
 class Mol extends Sprite
   constructor: ->
     super 151, 169
