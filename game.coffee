@@ -46,3 +46,9 @@ class GameGamen extends Scene
 
     @mol = new Mol()
     @addChild @mol
+
+class Mol extends Sprite
+  constructor: ->
+    super 151, 169
+    @image = core.assets['mol.png']
+    @moveTo GAMEN_YOKO / 2 - @width, 500
