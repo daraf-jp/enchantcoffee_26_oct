@@ -50,6 +50,9 @@ class GameGamen extends Scene
     @seigenJikan = new SeigenJikan(30)
     @addChild @seigenJikan
 
+    @taniGoukei = new TaniGoukei()
+    @addChild @taniGoukei
+
   onenterframe: ->
     if @seigenJikan.nokoriFrame < 0
       core.gameOverGamen = new GameOverGamen()
