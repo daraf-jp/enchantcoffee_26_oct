@@ -94,3 +94,6 @@ class GameOverGamen extends Scene
     haikei.image = core.assets['game_over1.png']
 
     @addChild haikei
+
+  ontouchstart: ->
+    core.replaceScene core.titleGamen
