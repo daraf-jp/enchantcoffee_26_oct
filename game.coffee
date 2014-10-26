@@ -62,6 +62,14 @@ class GameGamen extends Scene
       tani = new Tani()
       @addChild tani
 
+      that = @
+      tani.addEventListener 'enterframe', ->
+        if @intersect that.mol
+          that.removeChild @
+          that.taniGoukei.rishu()
+        if @y > GAMEN_TATE
+          that.removeChild @
+
 class Mol extends Sprite
   constructor: ->
     super 151, 169
