@@ -76,3 +76,7 @@ class SeigenJikan extends Label
 
     @nokoriFrame = jikan * core.fps
 
+  onenterframe: ->
+    @nokoriFrame--
+    nokoriJikan = @nokoriFrame / core.fps
+    @text = nokoriJikan.toFixed(2).toString()
