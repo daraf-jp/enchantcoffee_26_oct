@@ -64,3 +64,15 @@ class Mol extends Sprite
 
     @x = e.x - @width / 2
     # @y = e.y - @height / 2
+
+class SeigenJikan extends Label
+  constructor: (jikan) ->
+    super()
+    @width = 180
+    @textAlign = 'center'
+    @moveTo(25, 60)
+    @font = '48px Serif'
+    @color = 'white'
+
+    @nokoriFrame = jikan * core.fps
+
