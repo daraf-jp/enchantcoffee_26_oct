@@ -109,6 +109,14 @@ class TaniGoukei extends Label
     @tani++
     @text = @tani.toString()
 
+class Tani extends Sprite
+  constructor: ->
+    super 95, 100
+    @image = core.assets['print.png']
+
+    @x = Math.random() * (GAMEN_YOKO - @width)
+    @y = -@height
+
 class GameOverGamen extends Scene
   constructor: () ->
     super()
