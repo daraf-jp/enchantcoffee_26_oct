@@ -89,6 +89,18 @@ class SeigenJikan extends Label
     nokoriJikan = @nokoriFrame / core.fps
     @text = nokoriJikan.toFixed(2).toString()
 
+class TaniGoukei extends Label
+  constructor: ->
+    super()
+    @text  = '0'
+    @width = 600
+    @textAlign = 'center'
+    @font = '80px Serif'
+    @color = 'white'
+    @moveTo 325, 250
+
+    @tani = 0
+
 class GameOverGamen extends Scene
   constructor: () ->
     super()
