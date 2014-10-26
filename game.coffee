@@ -24,3 +24,10 @@ window.onload = ->
     @pushScene @titleGamen
 
   core.start()
+
+class TitleGamen extends Scene
+  constructor: ->
+    super()
+    haikei = new Sprite(GAMEN_YOKO, GAMEN_TATE)
+    haikei.image = core.assets['title.png']
+    @addChild haikei
