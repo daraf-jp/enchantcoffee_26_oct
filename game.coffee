@@ -101,6 +101,10 @@ class TaniGoukei extends Label
 
     @tani = 0
 
+  rishu: ->
+    @tani++
+    @text = @tani.toString()
+
 class GameOverGamen extends Scene
   constructor: () ->
     super()
