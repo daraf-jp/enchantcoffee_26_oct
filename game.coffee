@@ -35,3 +35,11 @@ class TitleGamen extends Scene
   ontouchstart: ->
     core.gameGamen = new GameGamen()
     core.replaceScene core.gameGamen
+
+class GameGamen extends Scene
+  constructor: ->
+    super()
+
+    haikei = new Sprite(GAMEN_YOKO, GAMEN_TATE)
+    haikei.image = core.assets['game.png']
+    @addChild haikei
